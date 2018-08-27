@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Korean 1A WB</title>
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<!-- Include Resource Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/foundation.min.css"/>
+
+		<!--
+		Include Resource Javascript
+
+		NOTE: These are for handling things outside of the scope of AmplitudeJS
+		-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/foundation.min.js"></script>
+
+		<!-- Include Amplitude JS -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@3.3.0/dist/amplitude.js"></script>
+
+		<!--
+		Include UX functions JS
+
+		NOTE: These are for handling things outside of the scope of AmplitudeJS
+		-->
+		<script type="text/javascript" src="js/functions.js"></script>
+
+		<!-- Include Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	</head>
+	<body>
+		<div class="grid-x" id="blue-playlist-container">
+			<div class="large-10 medium-12 small-11 large-centered medium-centered small-centered cell" id="amplitude-player">
+				<div class="grid-x">
+					<div class="large-6 medium-6 small-12 cell" id="amplitude-left">
+						<a href="https://groupme.com/join_group/42945855/wMZpc1" target="_blank"><img amplitude-song-info="cover_art_url" amplitude-main-song-info="true"/></a>
+						<div id="player-left-bottom">
+							<div id="time-container">
+								<span class="current-time">
+									<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+								</span>
+								<div id="progress-container">
+									<input type="range" class="amplitude-song-slider" amplitude-main-song-slider="true"/>
+									<progress id="song-played-progress" class="amplitude-song-played-progress" amplitude-main-song-played-progress="true"></progress>
+									<progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+								</div>
+								<span class="duration">
+									<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+								</span>
+							</div>
+
+							<div id="control-container">
+								<div id="repeat-container">
+									<div class="amplitude-repeat" id="repeat"></div>
+									<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+								</div>
+
+								<div id="central-control-container">
+									<div id="central-controls">
+										<div class="amplitude-prev" id="previous"></div>
+										<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+										<div class="amplitude-next" id="next"></div>
+									</div>
+								</div>
+
+								<div id="volume-container">
+									<div class="volume-controls">
+										<div class="amplitude-mute amplitude-not-muted"></div>
+										<input type="range" class="amplitude-volume-slider"/>
+										<div class="ms-range-fix"></div>
+									</div>
+									<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle-right"></div>
+								</div>
+							</div>
+
+
+
+							<div id="meta-container">
+								<span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+
+								<div class="song-artist-album">
+									<span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+									<span amplitude-song-info="album" amplitude-main-song-info="true"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="large-6 medium-6 small-12 cell" id="amplitude-right">
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 1</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+							<!--
+							<a href="#" class="bandcamp-link" target="_blank">
+								<img class="bandcamp-grey" src="./img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="./img/bandcamp-white.svg"/>
+							</a>
+							<span class="song-duration">8:88</span>
+							-->
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 2</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 3</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="3">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 4</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="4">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 5</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="5">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 6</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="6">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 7</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="7">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 8</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="8">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 9</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="9">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 10</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="10">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 11</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="11">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 12</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="12">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 13</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="13">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 14</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="14">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 15</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="15">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 16</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="16">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 17</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="17">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 18</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="18">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 19</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="19">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 20</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="20">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 21</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="21">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 22</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="22">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 23</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="23">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 24</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="24">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 25</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="25">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 26</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="26">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 27</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="27">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 28</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="28">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 29</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="29">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 30</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="30">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 31</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="31">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 32</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="32">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 33</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="33">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 34</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="34">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 35</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="35">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 36</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="36">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="./img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">CD 37</span>
+								<span class="song-artist">Korean 1A WB</span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		Amplitude.init({
+		"songs": [
+		{
+		"name": "CD 1",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1QSsaOfXqffSnv8AmeH9TTTe-d13RhUJo",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 2",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1n5eVp13H4tiD7JJyl6i0jl0uhVwrl7qT",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 3",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=19rUx8RU509z8OKiubJeK6B87nnzk9iMZ",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 4",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1RZUZ_h5Elu4-AV5kK7a26t4-jTsSXfbb",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 5",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1nRC4rcfsMCwnsZrEWcfKZCzcjAzyNKzV",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 6",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1zGiVNgoIwxm23QQJpuGf7fzX3wSoRuif",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 7",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1afJqRtwDDLE5t3LOHZ-u6VViDGpxl6vJ",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 8",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=15CxHwhijSd-IMOCCv90eV-iiCHJ9UkDo",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 9",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1c2M4vX7q29guTAKfiYoeYHoJCwiQDQYv",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 10",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1NSjBzNxSihJL_O2CMKOK2kN08ah510R8",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 11",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=14CfthHMBleDMLOOkkKXAGPeg6m8KNVgi",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 12",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1SRZV3tmmlWOonnDlgQBLnPT2qDVfiJcN",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 13",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1pQnXdkuhnNxWBxGwcaVD-1yxhZujk_k4",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 14",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1O6c3lSGcfDZuGPPjiTcO3Nh1alM9eHye",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 15",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1IQmhl4ndMDbgwIwI64U9ejQA3cpp_A7j",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 16",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1ZwRT7PRwa103C7NWEowr8pW_wP85629X",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 17",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=137GcbpXAQPxXaU98lY2MHS8ozVm5idg7",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 18",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1W_iTCf1pJfH5hax7FcZ96O9GV6EhWEyu",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 19",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=130A1xcDDQgACn-VrLIDGW2rqV9dl8iau",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 20",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1NdMQXRXIG34N0bt4thm1SBRmDJissZY0",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 21",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1NWJJnKZIulJAOmdzeIFx4zvw1U5_Ttbx",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 22",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1x0HrtGiSRLeK-qjNZBLAlkIAIydL1R0r",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 23",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1cQTF2OFF5BlV_9hdQEsU1fnF3Cp4M8sR",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 24",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1YMrvlnJWqZYFE4ohLGZB3R5FeDhcMkFO",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 25",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1hwjNEdJwcPmw6083r3DT4Og0katCS5b0",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 26",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1C18AMgLTXvOB9K16bh8jCQrrr7_HR8-L",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 27",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1ikZv2qTWFH0UcZvVoYjdFL0xqy9p0tW_",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 28",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1JvoZhAwmN5yNEyHEEaiallijbzLjVEXV",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 29",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1ZD2SNs9DQlCRrbrdfghurJocUqf9T9bh",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 30",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1QbNhqu7Xm3ZsjZyC_eMlkxTIU3sfTe73",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 31",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=13Vy18xehWArkAc5XyPNlfPjGmDHXwLqk",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 32",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1ww8LlJeM_fOJeAQBGLs5NfSniZZw7JWO",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 33",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1u-XI58bbsfQ6jrvubm0NqiEsozxJ4Ir2",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 34",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=19yZysA62_nPzVh6P8UgEKsSIVyvL3PNN",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 35",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1VfqeFfNrQ2dWybhkCBddgKhm0c2wVHwp",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 36",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1SKWOq33rw9cQYIJblXykqTvv_QxWLSU5",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		},
+		{
+		"name": "CD 37",
+		"artist": "Sogang",
+		"album": "Korean 1A WB",
+		"url": "https://drive.google.com/uc?export=download&id=1GeM-dR7WfiXHsaTVVv_ZlEGBu1lUfmbO",
+		"cover_art_url": "https://i.imgur.com/47KGgBL.png"
+		}		
+		]
+		});
+	</script>
+</html>
